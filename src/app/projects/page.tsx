@@ -3,6 +3,7 @@ import Link from "next/link";
 import { connection } from "next/server";
 import { Suspense } from "react";
 import {GetUserProfile, GetUsersRepositories} from "@/services/FetchRepositorys";
+import Image from "next/image";
 
 interface Repositories {
     id: number;
@@ -46,17 +47,17 @@ const ProjectsContent = async () => {
                 <Link href="/" className="text-white">Voltar</Link>
                 <h1 className="text-2xl text-white text-center">Projetos Atuais</h1>
             </div>
-            <div className="flex flex-row space-x-3 px-2 mt-1">
+            <div className="flex flex-row space-x-3 px-2  bg-blue-300 p-2 rounded-b-2xl">
             <div className="flex items-center space-x-3">
-                <img src={props.profile.avatar_url} alt={props.profile.name} width={100} height={300} className={`${props.profile.avatar_url}`} />
+                <Image src={props.profile.avatar_url} alt={props.profile.name} width={100} height={300} className={`${props.profile.avatar_url}`} />
             </div>
             <div>
                 <h1>{props.profile.name}</h1>
                 <p>{props.profile.bio}</p>
             </div>
             </div>
-            <div className="mt-8">
-                <h2 className="text-xl font-semibold">Repositories</h2>
+            <div className="mt-1.5 bg-amber-200 p-2 rounded-2xl">
+                <h2 className="text-xl font-semibold text-center">Repositórios</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
                     {props.repositories.map(repo =>  (
                         <div key={repo.id} className="p-4 border rounded-lg">
