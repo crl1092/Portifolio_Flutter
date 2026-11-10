@@ -28,3 +28,22 @@ export const GetUsersRepositories = async (username: string) => {
         return null;
     }
 }
+
+
+export const GetJavaRepositories = async (username: string) => {
+    const response = await axios.get(`${Github_Api_url}/search/repositories`, {
+        params: {
+            q: `user:${username} language:Java`,
+            sort: "updated",
+            order: "desc",
+            per_page: 100,
+        },
+    });
+    if(response.status === 200) {
+        return response.data.items.filter(
+            (repository: { language: string | null }) => repository.language === "Java",
+        );
+    } else {
+        return null;
+    }
+}
