@@ -17,7 +17,7 @@ export default function About() {
                 <br/>
                 <p className="text-center">Olá, seja Bem Vindo!</p>
                 <p>  Eu me chamo <strong>Cristhiano Rodrigues</strong>, sou estudante em formação no curso de <strong>Engenharia de Software</strong> pela <strong>Estácio de Sá</strong> indo para o <strong>5° periodo</strong> no inicio do ano de 2027 e com previsão para conclusão em meados de 2028.</p>
-                <p>  Atualmente busco oportunidades para atuar na área de <strong>Desenvolvimento Mobile usando a linguagem de programação Flutter </strong>inicialmente com oportunidades para espansão para um desenvolvimento <strong>Backend .NET core, Java com Spring Boot , Android Nativo e React Native </strong></p>
+                <p>  Atualmente busco oportunidades para atuar na área de <strong>Desenvolvimento Mobile usando a linguagem de programação Flutter </strong>inicialmente com oportunidades para expansão para um desenvolvimento <strong>Backend .NET core, Java com Spring Boot , Android Nativo e React Native </strong></p>
             </div>
             <div className="mt-1 bg-purple-400 rounded-2xl p-2">
                 <h4 className="text-center font-bold">Contato:</h4>
